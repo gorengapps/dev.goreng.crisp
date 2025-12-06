@@ -1,0 +1,22 @@
+{
+  "name": "dev.goreng.crisp",
+  "version": "0.1.0",
+  "displayName": "Goreng Crisp",
+  "description": "A zero-allocation tweening library with IRunLoop integration and Awaitable support.",
+  "unity": "6000.0",
+  "dependencies": {
+    "dev.goreng.loop": "1.1.0",
+    "dev.goreng.events": "1.3.3"
+  },
+  "keywords": [
+    "tween",
+    "animation",
+    "awaitable",
+    "zero-alloc"
+  ],
+  "author": {
+    "name": "Goreng Dev",
+    "email": "dev@goreng.dev",
+    "url": "https://goreng.dev"
+  }
+}
