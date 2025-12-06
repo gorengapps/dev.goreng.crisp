@@ -1,0 +1,17 @@
+{
+    "name": "dev.goreng.crisp",
+    "rootNamespace": "dev.goreng.crisp",
+    "references": [
+        "dev.goreng.loop",
+        "dev.goreng.events"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
