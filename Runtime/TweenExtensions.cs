@@ -29,7 +29,7 @@ namespace dev.goreng.crisp
             return t;
         }
 
-        public static Tween OnComplete(this Tween t, Action action)
+        public static Tween SetOnComplete(this Tween t, Action action)
         {
             Crisp.SetOnComplete(t.ID, action);
             t.OnComplete = action;
