@@ -1,6 +1,6 @@
 {
   "name": "dev.goreng.crisp",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "displayName": "Goreng Crisp",
   "description": "A zero-allocation tweening library with IRunLoop integration and Awaitable support.",
   "unity": "6000.0",
