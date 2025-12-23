@@ -84,6 +84,18 @@ namespace dev.goreng.crisp
             throw new ArgumentException($"Tween with ID {id} not found");
         }
 
+        public bool IsActive(int id)
+        {
+             for (int i = 0; i < _capacity; i++)
+            {
+                if (_tweens[i].IsActive && _tweens[i].ID == id)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         public void ChainOnComplete(int id, Action callback)
         {
              for (int i = 0; i < _capacity; i++)

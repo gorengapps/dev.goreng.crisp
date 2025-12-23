@@ -65,9 +65,22 @@ namespace dev.goreng.crisp
             _runner?.Kill(id);
         }
 
+        public static bool IsActive(int id)
+        {
+            return _runner != null && _runner.IsActive(id);
+        }
+
         internal static void ReportError(Exception e)
         {
-            OnError?.Invoke(e);
+            if (OnError != null)
+            {
+                OnError.Invoke(e);
+            }
+            else
+            {
+                // Fallback logging so errors aren't swallowed silently
+                Debug.LogException(e);
+            }
         }
 
         public static event Action<Exception> OnError;
@@ -162,6 +175,12 @@ namespace dev.goreng.crisp
                 catch (OperationCanceledException)
                 {
                     Kill(tween.ID);
+                    return;
+                }
+
+                // If tween was killed externally or by error, stop waiting
+                if (!completed && !IsActive(tween.ID))
+                {
                     return;
                 }
             }
